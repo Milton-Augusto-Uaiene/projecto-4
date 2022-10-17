@@ -1,0 +1,176 @@
+
+.sobre-algo {
+	margin-top: 3rem;
+}
+
+.sobre-container {
+	display: grid;
+	grid-template-columns: 40% 60%;
+	gap: 5rem;
+}
+
+.sobre-right > p {
+	margin: 1.6rem 0 2.5rem;
+}
+
+.sobre-cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.sobre-card {
+	background: var(--color-bg1);
+	padding: 1.6rem;
+	border-radius: 1rem;
+	text-align: center;
+	transition: var(--transition);
+}
+
+.sobre-card:hover {
+	background: var(--color-bg2);
+	box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.sobre-icon {
+	background: var(--color-danger);
+	padding: 0.6rem;
+	border-radius: 1rem;
+	display: inline-block;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+.sobre-card:nth-child(2) .sobre-icon {
+	background: var(--color-success);
+}
+
+.sobre-card:nth-child(3) .sobre-icon {
+	background: var(--color-primary);
+}
+
+.sobre-card p {
+	padding-top: 2rem;
+}
+
+/*=============== TEAM SECCAO ============ */
+
+.team {
+	background: var(--color-bg1);
+	box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.team-memb {
+	background: var(--color-bg2);
+	padding: 2rem;
+	border: 1px solid transparent;
+	border-radius: 0.5rem;
+	transition: var(--transition);
+	position: relative;
+	overflow: hidden; 
+}
+
+.team-memb:hover {
+	background: transparent;
+	border-color: var(--color-primary);
+}
+
+.team-img img {
+	filter: saturate(0);
+}
+
+.team-img:hover img {
+	filter: saturate(1);
+}
+
+.team-Info *{
+	text-align: center;
+	margin-top: 1.4rem;
+}
+
+.team-Info p {
+	color: var(--color-light);
+}
+
+.team-sociais {
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	right: -100%;
+	display: flex;
+	flex-direction: column;
+	background: var(--color-primary);
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+	transition: var(--transition);
+}
+
+.team-sociais a {
+	padding: 1rem;
+}
+
+.team-memb:hover .team-sociais {
+	right: 0;
+}
+
+
+
+/* ========= TABLE RESPOSIVIDADE ======= */
+
+@media screen and (max-width: 1024px) {
+	.sobre-algo {
+		margin-top: 2rem;
+	}
+
+	.sobre-container {
+		grid-template-columns: 1fr;
+		gap: 4rem;
+	}
+
+	.sobre-left {
+		width: 80%;
+		margin: auto;
+	}
+
+	.team-container {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+
+	.team-memb {
+		padding: 1rem;
+	}
+}
+
+
+/* ========= MOBILE RESPOSIVIDADE ======= */
+
+@media screen and (max-width: 600px) {
+	.sobre-cards {
+		grid-template-columns: 1fr 1fr;
+		gap: 0.7rem;
+	}
+
+	.team-container {
+		grid-template-columns: 1fr 1fr;
+		gap: 0.7rem;
+	}
+
+	.team-memb {
+		padding: 0;
+	}
+
+	.team-memb p {
+		margin-bottom: 1.5rem;
+	}
+}
+
+
+
+
